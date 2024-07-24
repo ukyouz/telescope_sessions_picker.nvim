@@ -53,7 +53,7 @@ local load_session = function(prompt_bufnr)
     end
     vim.api.nvim_buf_delete(current_buffer, { force = true })
 
-    vim.api.nvim_command('silent source ' .. dir)
+    vim.api.nvim_command('silent! source ' .. dir)
     -- vim.api.nvim_command('doautocmd User SessionLoadPost')
   end)
 end
